@@ -1,0 +1,39 @@
+@startuml platform-api-components
+title Platform API v2 — Component Diagram
+
+package "Clients" {
+  [Next.js Apps]
+  [Flutter Mobile]
+  [Admin Dashboard]
+}
+
+package "platform_api_v2" {
+  [Controllers] --> [Application Services]
+  [Application Services] --> [Repositories]
+  [Repositories] --> [Prisma Client]
+}
+
+database "PostgreSQL" {
+  frame "Identity" {
+    [user]
+    [role]
+    [user_roles]
+    [user_app_profile]
+  }
+  frame "Yoruba Calendar" {
+    [orisa]
+    [festival]
+    [ticket]
+  }
+}
+
+[Next.js Apps] --> [Controllers] : HTTPS / JWT
+[Flutter Mobile] --> [Controllers]
+[Admin Dashboard] --> [Controllers]
+[Prisma Client] --> [user]
+[Prisma Client] --> [role]
+[Prisma Client] --> [user_roles]
+[Prisma Client] --> [orisa]
+[Prisma Client] --> [festival]
+
+@enduml

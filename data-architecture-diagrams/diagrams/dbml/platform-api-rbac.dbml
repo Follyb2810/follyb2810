@@ -1,0 +1,91 @@
+// Platform API v2 — RBAC Schema
+// Paste at https://dbdiagram.io to visualize and export PNG
+// Author: Babatunde Yusuf Folorunsho
+
+Enum app_enum {
+  YORUBA_CALENDAR
+  TAX_FLOW
+  CLEANING_SERVICE
+  TICKETING
+}
+
+Enum role_name_enum {
+  USER
+  CREATOR
+  MODERATOR
+  ADMIN
+  SUPERADMIN
+  TAX_MANAGER
+  CALENDAR_MANAGER
+  TICKET_MANAGER
+  CLEANING_MANAGER
+}
+
+Enum user_type_enum {
+  INDIVIDUAL
+  COMPANY
+  SME
+}
+
+Table user {
+  id varchar [pk]
+  email varchar [unique, not null]
+  name varchar
+  email_verified timestamp
+  password varchar
+  two_factor_enabled boolean [default: false]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp
+}
+
+Table role {
+  id varchar [pk]
+  name role_name_enum [unique, not null]
+}
+
+Table user_roles {
+  id varchar [pk]
+  user_id varchar [ref: > user.id]
+  role_id varchar [ref: > role.id]
+  app app_enum [not null]
+
+  indexes {
+    (user_id, role_id, app) [unique]
+  }
+}
+
+Table user_app_profile {
+  id varchar [pk]
+  user_id varchar [ref: > user.id]
+  app app_enum [not null]
+  type user_type_enum [not null]
+  created_at timestamp
+  updated_at timestamp
+
+  indexes {
+    (user_id, app) [unique]
+  }
+}
+
+Table orisa {
+  id int [pk, increment]
+  name varchar [unique]
+  user_id varchar [ref: > user.id, null]
+}
+
+Table festival {
+  id int [pk, increment]
+  title varchar [not null]
+  description text
+  orisa_id int [ref: > orisa.id]
+  user_id varchar [ref: > user.id]
+  country varchar
+  event_type varchar
+  location varchar
+}
+
+Table ticket {
+  id varchar [pk]
+  user_id varchar [ref: > user.id]
+  status varchar
+}

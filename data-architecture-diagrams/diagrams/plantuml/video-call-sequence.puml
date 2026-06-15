@@ -1,0 +1,33 @@
+@startuml video-call-appointment-sequence
+title DigiDokita — Video Call Appointment Sequence
+
+actor Patient
+participant "REST API" as API
+database "PostgreSQL\n(Prisma)" as DB
+participant "Socket.io" as Socket
+actor Doctor
+
+== Book appointment ==
+Patient -> API : POST /appointments
+API -> DB : INSERT appointment (status=pending)
+API -> Socket : emit appointment:requested
+Socket -> Doctor : push notification
+
+== Doctor accepts ==
+Doctor -> API : PATCH /appointments/{id}
+API -> DB : UPDATE status=confirmed
+API -> Socket : emit appointment:confirmed
+Socket -> Patient : push notification
+
+== Join video room ==
+Patient -> Socket : join:room { appointmentId }
+Doctor -> Socket : join:room { appointmentId }
+Patient -> Doctor : WebRTC signaling (offer/answer/ICE)
+note over Patient, Doctor : Peer-to-peer video via WebRTC
+
+== Chat during session ==
+Patient -> Socket : message:send { content }
+Socket -> DB : INSERT message
+Socket -> Doctor : message:received
+
+@enduml

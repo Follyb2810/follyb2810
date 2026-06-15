@@ -1,0 +1,72 @@
+// DigiDokita Video Call API — Core entities
+// Paste at https://dbdiagram.io
+
+Table hospital_user {
+  id uuid [pk]
+  role varchar [note: 'STI: Doctor | Patient | LabOfficer | Pharmacist']
+  email varchar [unique, not null]
+  full_name varchar [not null]
+  phone_number varchar [unique]
+  account_status varchar
+  verification_status varchar
+  speciality varchar [note: 'Doctor only']
+  created_date timestamp
+  updated_at timestamp
+
+  Note: 'Schema: public — single-table inheritance by role column'
+}
+
+Table appointment {
+  id uuid [pk]
+  requester_id uuid [ref: > hospital_user.id]
+  recipient_id uuid [ref: > hospital_user.id]
+  status varchar [note: 'pending | confirmed | completed | cancelled']
+  scheduled_at timestamp
+  session_type varchar [note: 'video | chat | in-person']
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table message {
+  id uuid [pk]
+  sender_id uuid [ref: > hospital_user.id]
+  appointment_id uuid [ref: > appointment.id]
+  content text
+  message_type varchar [note: 'text | image | file']
+  created_at timestamp
+}
+
+Table patient_test_result {
+  id uuid [pk]
+  patient_id uuid [ref: > hospital_user.id]
+  technician_id uuid [ref: > hospital_user.id]
+  test_name varchar
+  test_type varchar
+  status varchar
+  result_file_url varchar
+  test_date timestamp
+
+  Note: 'Schema: medical'
+}
+
+Table activity_logs {
+  id uuid [pk]
+  activity varchar
+  route varchar
+  user_type varchar
+  response_status varchar
+  payload varchar
+  created_at timestamp
+
+  Note: 'Schema: public — audit trail'
+}
+
+Table chat_notification {
+  id uuid [pk]
+  sender_id uuid [ref: > hospital_user.id]
+  receiver_id uuid [ref: > hospital_user.id]
+  title varchar
+  body text
+  read boolean [default: false]
+  created_at timestamp
+}

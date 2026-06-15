@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="24.7.17">
+  <diagram id="yoruba-er" name="Yoruba Calendar ER">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Kọ́jọ́dá — Yoruba Calendar Domain Model" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="560" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="user" value="User&#xa;id PK · email UK · role" style="swimlane;fontStyle=1;startSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="orisa" value="Orisa&#xa;id PK · name UK · description" style="swimlane;fontStyle=1;startSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="festival" value="Festival&#xa;id PK · title · status&#xa;orisaId FK · creatorId FK" style="swimlane;fontStyle=1;startSize=26;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="300" y="240" width="200" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="ticket" value="Ticket&#xa;id PK · festivalId FK&#xa;price · quantity" style="swimlane;fontStyle=1;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="560" y="240" width="170" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="order" value="Order&#xa;id PK · userId FK · status · total" style="swimlane;fontStyle=1;startSize=26;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="orderitem" value="OrderItem&#xa;orderId FK · ticketId FK · qty" style="swimlane;fontStyle=1;startSize=26;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="orisa" target="festival">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="user" target="festival">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="festival" target="ticket">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="user" target="order">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="order" target="orderitem">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="ticket" target="orderitem">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="cycle" value="4-day week: Ako Ojo → Ojo Awo → Ojo Onis → Ojo Igbi" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="380" width="430" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

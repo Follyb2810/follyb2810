@@ -94,7 +94,7 @@ I document every data model and system design before writing code — using tool
 
 ### Sample diagram repo — host on GitHub
 
-**[data-architecture-diagrams](https://github.com/Follyb2810/data-architecture-diagrams)** — ready-to-push sample project with `.drawio`, Mermaid, DBML, and PlantUML files for Platform API, Video Call API, Yoruba Calendar, and PCSS.
+**[data-architecture-diagrams](https://github.com/Follyb2810/follyb2810/tree/main/data-architecture-diagrams)** — sample project with `.drawio`, Mermaid, DBML, and PlantUML files for Platform API, Video Call API, Yoruba Calendar, and PCSS.
 
 ```mermaid
 erDiagram
@@ -114,7 +114,7 @@ erDiagram
 
 ## Featured Projects
 
-### [Data Architecture Diagrams](https://github.com/Follyb2810/data-architecture-diagrams)
+### [Data Architecture Diagrams](https://github.com/Follyb2810/follyb2810/tree/main/data-architecture-diagrams)
 Portfolio repo of ER diagrams, system architecture, and data flows — **draw.io**, **Mermaid**, **DBML**, **PlantUML** — mapped to real projects.
 
 **Includes:** Platform API RBAC · Video Call telemedicine · Yoruba Calendar · PCSS content model
