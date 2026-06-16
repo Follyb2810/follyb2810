@@ -2,9 +2,9 @@
 
 # Babatunde Yusuf Folorunsho
 
-### Software Engineer · Data Architect · Full-Stack Developer
+### Software Engineer · Data Architect · Full-Stack Developer · Mobile & Web3 Builder
 
-I design **data models first**, then build the APIs and products on top — across insurance, healthcare, gaming, cultural platforms, and multi-tenant SaaS.
+I design **data models first**, then build the APIs, mobile apps, and products on top — across insurance, healthcare, gaming, Web3, cultural platforms, and multi-tenant SaaS.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-follyb.vercel.app-0ea5e9?style=for-the-badge&logo=vercel&logoColor=white)](https://follyb.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/babatunde-yusuf-folorunsho-390869215)
@@ -20,7 +20,7 @@ I design **data models first**, then build the APIs and products on top — acro
 
 I build production software end to end — but I start with the **data layer**. Clear entities, relationships, constraints, and migration paths are what make systems reliable as they scale.
 
-My stack: **Next.js & React** on the frontend, **Node.js, .NET, and FastAPI** on the backend, **Unity (C#)** for game clients, and **PostgreSQL + MongoDB** persistence with **Prisma**, **Mongoose**, and **Entity Framework Core**. I model domains for real products — insurance, telemedicine, chat, gaming, event platforms, RBAC systems, bookings — not generic CRUD demos.
+My stack: **Next.js & React** on the frontend, **React Native & Expo** for mobile apps, **Flutter** for cross-platform clients, **Node.js, .NET, and FastAPI** on the backend, **Unity (C#)** for games, **Web3 wallets & multi-chain APIs**, and **PostgreSQL + MongoDB** persistence with **Prisma**, **Mongoose**, and **Entity Framework Core**. I model domains for real products — insurance, telemedicine, chat, gaming, DeFi, event platforms, RBAC systems, bookings — not generic CRUD demos.
 
 ---
 
@@ -64,6 +64,32 @@ My stack: **Next.js & React** on the frontend, **Node.js, .NET, and FastAPI** on
 
 ---
 
+### Mobile Application Builder
+
+**Cross-platform mobile apps** with React Native, Expo, Flutter, and Unity for production user experiences.
+
+- Built **[Bet_App](https://github.com/Follyb2810/Bet_App)** — Expo Router mobile app with native navigation, splash screens, and platform-ready UI for a betting product
+- Developed **[airbnb-clone-react-native](https://github.com/Follyb2810/airbnb-clone-react-native)** — React Native marketplace app with Clerk auth, maps, clustering, bottom sheets, and Reanimated transitions
+- Contributed to **[DigiDokita](https://github.com/DigiDokita)** — Flutter patient/doctor mobile apps connected to telemedicine APIs and clinical data flows
+- Shipped **ScrableX** and **[ArrowMen_Unity](https://github.com/Follyb2810/ArrowMen_Unity)** — mobile-friendly Unity games with responsive layouts and touch-first gameplay
+
+`React Native` · `Expo` · `Flutter` · `Unity` · `Mobile UI` · `Clerk` · `Maps`
+
+---
+
+### Web3 Developer
+
+**Wallet-connected apps and blockchain-backed backends** across Ethereum, Solana, Tron, and Cosmos ecosystems.
+
+- Built **[Add-Token](https://github.com/Follyb2810/Add-Token)** — MetaMask dapp for suggesting/importing ERC-20 tokens with wallet provider detection
+- Extended **[bet_server](https://github.com/Follyb2810/bet_server)** — multi-chain backend using **Ethers.js**, **Web3.js**, **Solana**, **TronWeb**, and **CosmJS** for wallet flows, auth, and real-time betting events
+- Built **[chaincart_v2](https://github.com/Follyb2810/chaincart_v2)** — Web3 commerce frontend with **Abstraxion** wallet integration, on-chain UX, and TanStack Query state
+- Backed chain commerce with **[chain_api_v1](https://github.com/Follyb2810/chain_api_v1)** — TypeScript/Express API with MongoDB models for users, products, and marketplace workflows
+
+`Web3` · `MetaMask` · `Ethers.js` · `Solana` · `Tron` · `CosmJS` · `WalletConnect` · `DeFi`
+
+---
+
 ## Data Modeling — What I Do
 
 This is the core of how I work. Every project below starts with a schema that reflects the business domain.
@@ -72,6 +98,7 @@ This is the core of how I work. Every project below starts with a schema that re
 |---|---|
 | **Entity–relationship design** | Users, roles, appointments, events, bookings — modeled with correct cardinality and foreign keys |
 | **Document modeling (MongoDB)** | Users, chats, blogs, bets, and wallet data — flexible schemas with Mongoose validation and indexed lookups |
+| **Web3 & on-chain product flows** | Wallet auth, token imports, multi-chain payments, and marketplace APIs across EVM and non-EVM chains |
 | **Multi-schema PostgreSQL** | Separate schemas (`public`, `medical`, `user_management`) for domain isolation in healthcare systems |
 | **RBAC & multi-tenant identity** | App-scoped roles with composite unique constraints (`userId + roleId + app`) |
 | **Enum-driven domains** | `RoleName`, `App`, `UserType`, appointment status — enforced at the database layer |
@@ -261,16 +288,52 @@ Unity game project with gameplay assets, scenes, and project configuration.
 
 ---
 
+### [Bet App — Expo Mobile](https://github.com/Follyb2810/Bet_App)
+Cross-platform mobile app for a betting product with Expo Router and native-ready navigation.
+
+`React Native` · `Expo` · `TypeScript`
+
+---
+
+### [Airbnb Clone — React Native](https://github.com/Follyb2810/airbnb-clone-react-native)
+Mobile marketplace clone with Clerk auth, map clustering, bottom sheets, and animated UI.
+
+`React Native` · `Expo` · `Clerk` · `Reanimated` · `Maps`
+
+---
+
+### [Add-Token — Web3 Dapp](https://github.com/Follyb2810/Add-Token)
+MetaMask dapp for suggesting and importing custom ERC-20 tokens into compatible wallets.
+
+`React` · `MetaMask` · `Web3` · `Etherscan`
+
+---
+
+### [ChainCart v2 — Web3 Commerce](https://github.com/Follyb2810/chaincart_v2)
+On-chain commerce frontend with wallet connection, product flows, and modern React UI.
+
+`Next.js` · `Abstraxion` · `Web3` · `TanStack Query` · `Zustand`
+
+---
+
+### [Chain API v1 — Web3 Backend](https://github.com/Follyb2810/chain_api_v1)
+TypeScript API backing chain-commerce flows with MongoDB models and JWT auth.
+
+`TypeScript` · `Express` · `MongoDB` · `Mongoose` · `Zod`
+
+---
+
 ## What I Bring to a Team
 
 | Software Engineering | Data Architecture & Modeling |
 |---|---|
 | Full-stack apps with Next.js, React, TypeScript | Relational schema design (PostgreSQL, Prisma, EF Core) |
-| REST APIs, real-time (Socket.io), admin dashboards | Document modeling with MongoDB & Mongoose |
+| React Native, Expo, and Flutter mobile apps | Document modeling with MongoDB & Mongoose |
 | Unity game systems, mobile UI, and C# gameplay logic | Multi-schema layouts & domain-driven table design |
-| Mobile with Flutter & React Native | RBAC models, STI patterns, composite constraints |
+| Web3 dapps, wallet flows, and multi-chain backends | RBAC models, STI patterns, composite constraints |
+| REST APIs, real-time (Socket.io), admin dashboards | Web3 commerce and wallet-integrated product design |
 | Dockerized deployments & CI-ready workflows | Migration governance, seed strategies, Zod validation |
-| Healthcare, insurance, gaming & marketplace experience | SQLite → Postgres upgrade paths & connection pooling |
+| Healthcare, insurance, gaming, DeFi & marketplace experience | SQLite → Postgres upgrade paths & connection pooling |
 | Architecture docs with draw.io, Mermaid, DBML | ER diagrams, sequence flows, schema docs on GitHub |
 
 ---
@@ -289,14 +352,19 @@ Unity game project with gameplay assets, scenes, and project configuration.
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
 ![Unity](https://img.shields.io/badge/Unity-000000?style=flat-square&logo=unity&logoColor=white)
 
-**Backend & Data**
+**Backend, Data & Web3**
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Web3.js](https://img.shields.io/badge/Web3.js-F16822?style=flat-square&logo=web3.js&logoColor=white)
+![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=flat-square&logo=ethereum&logoColor=white)
+![Solana](https://img.shields.io/badge/Solana-9945FF?style=flat-square&logo=solana&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
@@ -330,7 +398,7 @@ Unity game project with gameplay assets, scenes, and project configuration.
 
 ## Let's Connect
 
-Open to **Software Engineer**, **Data Architect**, and **Full-Stack Developer** roles — especially where schema design, API platforms, or healthcare/cultural tech matter.
+Open to **Software Engineer**, **Mobile Application Builder**, **Web3 Developer**, **Data Architect**, and **Full-Stack Developer** roles — especially where schema design, API platforms, mobile apps, or blockchain products matter.
 
 [![GitHub](https://img.shields.io/badge/GitHub-Follyb2810-181717?style=for-the-badge&logo=github)](https://github.com/Follyb2810)
 [![Portfolio](https://img.shields.io/badge/Website-follyb.vercel.app-000000?style=for-the-badge&logo=safari&logoColor=white)](https://follyb.vercel.app)
