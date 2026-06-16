@@ -4,7 +4,7 @@
 
 ### Software Engineer · Data Architect · Full-Stack Developer
 
-I design **data models first**, then build the APIs and products on top — across healthcare, cultural platforms, and multi-tenant SaaS.
+I design **data models first**, then build the APIs and products on top — across insurance, healthcare, gaming, cultural platforms, and multi-tenant SaaS.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-follyb.vercel.app-0ea5e9?style=for-the-badge&logo=vercel&logoColor=white)](https://follyb.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/babatunde-yusuf-folorunsho-390869215)
@@ -20,7 +20,7 @@ I design **data models first**, then build the APIs and products on top — acro
 
 I build production software end to end — but I start with the **data layer**. Clear entities, relationships, constraints, and migration paths are what make systems reliable as they scale.
 
-My stack: **Next.js & React** on the frontend, **Node.js, .NET, and FastAPI** on the backend, and **PostgreSQL-first** persistence with **Prisma** and **Entity Framework Core**. I model domains for real products — insurance, telemedicine, event platforms, RBAC systems, bookings — not generic CRUD demos.
+My stack: **Next.js & React** on the frontend, **Node.js, .NET, and FastAPI** on the backend, **Unity (C#)** for game clients, and **PostgreSQL + MongoDB** persistence with **Prisma**, **Mongoose**, and **Entity Framework Core**. I model domains for real products — insurance, telemedicine, chat, gaming, event platforms, RBAC systems, bookings — not generic CRUD demos.
 
 ---
 
@@ -40,6 +40,30 @@ My stack: **Next.js & React** on the frontend, **Node.js, .NET, and FastAPI** on
 
 ---
 
+### Backend Engineer · MongoDB APIs
+
+**Node/Express backends** backed by **MongoDB + Mongoose** for auth, content, chat, and gaming workflows.
+
+- Built **[Abino_backend](https://github.com/Follyb2810/Abino_backend)** — JWT auth, user registration, and blog CMS APIs with Mongoose schemas and protected routes
+- Extended **[Chat_App](https://github.com/Follyb2810/Chat_App)** — MERN real-time chat with MongoDB document models for users, groups, and messages, plus Socket.IO and Redux on the client
+- Built **[bet_server](https://github.com/Follyb2810/bet_server)** — TypeScript/Express API with Mongoose models, Socket.IO, background workers, and wallet/payment integrations for a betting platform
+
+`Node.js` · `Express` · `MongoDB` · `Mongoose` · `Socket.IO` · `JWT` · `TypeScript`
+
+---
+
+### Game Developer · Unity
+
+**Unity (C#)** gameplay and systems for mobile-friendly word and action games, with backend APIs where needed.
+
+- Built **ScrableX** — battle-style Scrabble with board generation, zone effects, perks, combo chains, dictionary validation, turn/score managers, and responsive UI
+- Developed **[ArrowMen_Unity](https://github.com/Follyb2810/ArrowMen_Unity)** — Unity game project with core gameplay, scene, and asset pipeline setup
+- Connected game/product flows to **MongoDB-backed APIs** for auth, messaging, and real-time updates
+
+`Unity` · `C#` · `TextMesh Pro` · `Mobile UI` · `Game Systems` · `REST APIs`
+
+---
+
 ## Data Modeling — What I Do
 
 This is the core of how I work. Every project below starts with a schema that reflects the business domain.
@@ -47,6 +71,7 @@ This is the core of how I work. Every project below starts with a schema that re
 | Modeling focus | How I apply it |
 |---|---|
 | **Entity–relationship design** | Users, roles, appointments, events, bookings — modeled with correct cardinality and foreign keys |
+| **Document modeling (MongoDB)** | Users, chats, blogs, bets, and wallet data — flexible schemas with Mongoose validation and indexed lookups |
 | **Multi-schema PostgreSQL** | Separate schemas (`public`, `medical`, `user_management`) for domain isolation in healthcare systems |
 | **RBAC & multi-tenant identity** | App-scoped roles with composite unique constraints (`userId + roleId + app`) |
 | **Enum-driven domains** | `RoleName`, `App`, `UserType`, appointment status — enforced at the database layer |
@@ -193,15 +218,59 @@ Broader telemedicine work — patient–doctor mobile apps, AI-assisted nursing,
 
 ---
 
+### [Abino Backend — MongoDB API](https://github.com/Follyb2810/Abino_backend)
+Express backend for authentication, user management, and blog content.
+
+**Data modeling:** Mongoose schemas for users and blog posts with JWT-protected routes and refresh flows.
+
+`Node.js` · `Express` · `MongoDB` · `Mongoose` · `JWT`
+
+---
+
+### [Chat App — MERN Backend](https://github.com/Follyb2810/Chat_App)
+Real-time chat platform with group messaging, notifications, and auth.
+
+**Data modeling:** MongoDB collections for users, chats, and group membership with Socket.IO event streams.
+
+`Node.js` · `MongoDB` · `Mongoose` · `Socket.IO` · `React` · `Redux`
+
+---
+
+### [Bet Server — Gaming API](https://github.com/Follyb2810/bet_server)
+TypeScript backend for a betting platform with wallets, workers, and real-time updates.
+
+**Data modeling:** Mongoose document models for users, bets, and transactions with queue-driven processing.
+
+`TypeScript` · `Express` · `MongoDB` · `Mongoose` · `Socket.IO` · `Bull`
+
+---
+
+### ScrableX — Unity Battle Scrabble
+Mobile-friendly Unity word-battle game with zone-based mechanics and advanced board modes.
+
+**Game systems:** Board generation, tile placement, dictionary validation, perks, traps, freeze effects, and match flow.
+
+`Unity` · `C#` · `TextMesh Pro` · `Mobile UI`
+
+---
+
+### [ArrowMen Unity](https://github.com/Follyb2810/ArrowMen_Unity)
+Unity game project with gameplay assets, scenes, and project configuration.
+
+`Unity` · `C#`
+
+---
+
 ## What I Bring to a Team
 
 | Software Engineering | Data Architecture & Modeling |
 |---|---|
 | Full-stack apps with Next.js, React, TypeScript | Relational schema design (PostgreSQL, Prisma, EF Core) |
-| REST APIs, real-time (Socket.io), admin dashboards | Multi-schema layouts & domain-driven table design |
+| REST APIs, real-time (Socket.io), admin dashboards | Document modeling with MongoDB & Mongoose |
+| Unity game systems, mobile UI, and C# gameplay logic | Multi-schema layouts & domain-driven table design |
 | Mobile with Flutter & React Native | RBAC models, STI patterns, composite constraints |
 | Dockerized deployments & CI-ready workflows | Migration governance, seed strategies, Zod validation |
-| Healthcare & marketplace domain experience | SQLite → Postgres upgrade paths & connection pooling |
+| Healthcare, insurance, gaming & marketplace experience | SQLite → Postgres upgrade paths & connection pooling |
 | Architecture docs with draw.io, Mermaid, DBML | ER diagrams, sequence flows, schema docs on GitHub |
 
 ---
@@ -220,12 +289,14 @@ Broader telemedicine work — patient–doctor mobile apps, AI-assisted nursing,
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+![Unity](https://img.shields.io/badge/Unity-000000?style=flat-square&logo=unity&logoColor=white)
 
 **Backend & Data**
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
