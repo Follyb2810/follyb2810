@@ -20,7 +20,23 @@ I design **data models first**, then build the APIs and products on top — acro
 
 I build production software end to end — but I start with the **data layer**. Clear entities, relationships, constraints, and migration paths are what make systems reliable as they scale.
 
-My stack: **Next.js & React** on the frontend, **Node.js, .NET, and FastAPI** on the backend, and **PostgreSQL-first** persistence with **Prisma** and **Entity Framework Core**. I model domains for real products — telemedicine, event platforms, RBAC systems, bookings — not generic CRUD demos.
+My stack: **Next.js & React** on the frontend, **Node.js, .NET, and FastAPI** on the backend, and **PostgreSQL-first** persistence with **Prisma** and **Entity Framework Core**. I model domains for real products — insurance, telemedicine, event platforms, RBAC systems, bookings — not generic CRUD demos.
+
+---
+
+## Experience
+
+### Software Engineer · Top Insurance Company in Nigeria
+
+**Digital Insurance Platform** — full-stack insurance operations for life and non-life products.
+
+- Built and extended a **modular monolith ASP.NET Core Web API** covering product catalog, quoting, policy lifecycle, payments, claims, and partner onboarding
+- Modeled insurance domain data in **PostgreSQL with EF Core** — products, cover types, term rates, quote insured/beneficiary flows, and versioned migrations
+- Integrated **TurnKey GIS/LMS** for policy issuance and **Paystack** for payment checkout across life and non-life journeys
+- Implemented product availability controls and service-layer filtering to expose selected life products online while keeping the full catalog manageable
+- Worked across auth (JWT/Identity), Redis caching, Hangfire jobs, Azure Blob storage, and certificate generation for motor policies
+
+`ASP.NET Core 8` · `Entity Framework Core` · `PostgreSQL` · `Redis` · `Paystack` · `TurnKey` · `Azure` · `Hangfire`
 
 ---
 
