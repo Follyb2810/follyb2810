@@ -413,5 +413,3 @@ Open to **Software Engineer**, **Mobile Application Builder**, **Web3 Developer*
 *"Good software starts with good data models."*
 
 </div>
-#   d b a _ s k e t c h  
- 
